@@ -32,7 +32,6 @@ const signup = async (name, email, password) => {
       email,
     });
   } catch (error) {
-    console.log(error);
     toast.error(error.code.split("/")[1].split("-").join(" "));
   }
 };
@@ -41,7 +40,6 @@ const login = async (email, password) => {
   try {
     await signInWithEmailAndPassword(auth, email, password);
   } catch (error) {
-    console.log(error);
     toast.error(error.code.split("/")[1].split("-").join(" "));
   }
 };
