@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./Login.css";
-import logo from "../../assets/logo.png";
 import { login, signup } from "../../firebase";
 import spinner from "../../assets/spinner.gif";
 
@@ -28,7 +27,7 @@ const Login = () => {
     </div>
   ) : (
     <div className="login">
-      <img src={logo} className="login-logo" />
+      <span className="logo">Streamify</span>
       <div className="login-form">
         <h1>{signState}</h1>
         <form>
